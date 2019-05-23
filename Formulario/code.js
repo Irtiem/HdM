@@ -1,8 +1,7 @@
 
 
 
-
-
+	
 
 //////////////////////////////////////Primera letra  en mayus
 function mayus(l,orange){
@@ -100,4 +99,76 @@ pdate.style.display = "none";
 
 
 }
+
+/////////////////////////////////expresionesRegulares
+function checkmail(){
+valor = document.getElementById("correo").value;
+if( !(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(valor)) ) {
+
+var aux = document.getElementById("cmail");
+cmail.style.display = "";
+  return false;
+}else{
+cmail.style.display = "none";
+
+}
+
+
+}
+function check(){
+
+var formulario = document.getElementById('formu');
+var nombre = formulario.nombre.value;
+var correo = formulario.correo.value;
+var tlfn = parseInt(formulario.tele.value);
+
+var datos=false;
+
+
+	if(expresionesReguleras(nombre, correo, tlfn)){
+		datos=true;
+    }else{
+		alert("Los valores introducidos no son validos");
+	}
+}
+
+
+function expresionesReguleras(nombre, correo, tlfn){
+
+	var reguname = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
+    var regumail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    var regutele = /^[9|6|7][0-9]{8}$/
+;
+   
+	
+    if(!reguname.test(nombre)){
+        return false;    
+		
+    }
+	
+	 if(!regumail.test(correo)){
+        return false;
+    }
+	
+	if(!reguteke.test(tlfn)){
+        return false;
+    }
+
+    return true;
+}
+
+/////////////////////////////////expresionesRegilares
+
+
+
+
+
+
+
+
+
+
+
+
+
 

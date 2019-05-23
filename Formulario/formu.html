@@ -2,29 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Registro</title>
+  <title>HdM</title>
   <meta name="description" content="HTML5">
   <meta name="author" content="Rafael">
   <link rel="stylesheet" href="formu.css">
   <link rel="shortcut icon" href="img/ico.png"/>
   <script type="text/javascript" src="code.js"></script>
-  
-
 </head>
+
 <body>
-<form method="get"  name="formu" method="post" >
+	<form method="get"  name="formu" id="formu" method="post" >
+
+		<p id="pruebaaa" style="background-color:pink"> </p>
+
+
+
+<script>
+
+	var d = new Date();
+	
+	date2 = d.toString();
+	document.getElementById("pruebaaa").innerHTML = d;
+	
+	var nodoPadre = document.getElementById("pruebaaa");
+	var nodoHijo = document.createTextNode("texto");
+	nodoPadre.appendChild(nodoHijo);
+	document.body.appendChild(nodoPadre);
+
+	
+	
+</script>
 
 <div id="cabecera">
-
-<div id="list">
-<ul>
-    <li><a href="./index.html">Inicio</a></li>
-    <li><a href="./sucursal.html">Sucursales</a></li>
-    <li><a href="./formu.html">Contacto</a></li>
-    <li><a href="./conoce.html">Conócenos</a></li>
+	<div id="list">
+	<ul>
+		<li><a href="./index.html">Inicio</a></li>
+		<li><a href="./sucursal.html">Sucursales</a></li>
+		<li><a href="./formu.html">Contacto</a></li>
+		<li><a href="./conoce.html">Conócenos</a></li>
  
-</ul>
-</div>
+	</ul>
+	</div>
 </div>
 
 
@@ -71,19 +89,19 @@
 Sexo<br/>
 <input type="radio" name="Sexo" value="Hombre" />Hombre
 <input type="radio" name="Sexo" value="Mujer" />Mujer
-<input type="radio" name="Sexo" value="Otros" />Splicer
-<input type="radio" name="Sexo" value="Otros" />Otros
+<input type="radio" name="Sexo" value="Otros" />Otro
+
 </div>
 
 </br>
 </br>Telefono</br>
 <input type="text" size="40" name="tele" id="tele" onchange="telef()">
-<p id="pt" style="display:none" > El telefono deben ser 9 números seguidos sin espacios </p>
+<p id="ctlfn" style="display:none" > El telefono deben ser 9 números seguidos sin espacios </p>
 
 </br>
 </br>Correo Electronico</br>
-<input type="text" size="40" name="correo" id="correo" onchange="correoo()">
-<p id="pc" style="display:none" > El correo no es valido </p>
+<input type="text" size="40" name="correo" id="correo" onchange="checkmail()">
+<p id="cmail" style="display:none" > El correo no es valido </p>
 </br>
 </br>
 
@@ -133,7 +151,7 @@ Destinos:<br/>
 
 <div id="pie">
 
-<input type="submit" name="Enviar" value="Enviar Datos" />
+<input type="submit" name="Enviar" value="Enviar Datos" onclick='check()'/>
 
 <input type="reset" id="res" name="Borrar Datos" value="Borrar Datos" /><br/>
 
