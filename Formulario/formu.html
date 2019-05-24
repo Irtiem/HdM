@@ -10,7 +10,16 @@
   <script type="text/javascript" src="code.js"></script>
 </head>
 
-<body>
+<body onload="startTime()">
+<div id="clockdate">
+	<div class="clockdate-wrapper">
+		<div id="clock"></div>
+		<div id="date"></div>
+	</div>
+</div>
+
+
+
 	<form method="get"  name="formu" id="formu" method="post" >
 
 		<p id="pruebaaa" style="background-color:pink"> </p>
@@ -94,9 +103,9 @@ Sexo<br/>
 </div>
 
 </br>
-</br>Telefono</br>
-<input type="text" size="40" name="tele" id="tele" onchange="telef()">
-<p id="ctlfn" style="display:none" > El telefono deben ser 9 números seguidos sin espacios </p>
+</br>Teléfono</br>
+<input type="text" size="40" name="tele" id="tele" onchange="checktelef()">
+<p id="ctlfn" style="display:none" > El teléfono introducido no es valido</p>
 
 </br>
 </br>Correo Electronico</br>
@@ -109,43 +118,6 @@ Sexo<br/>
 Acepto las condiciones del servicio y la política </br> de privacidad.<br/>
 <p id="pd" style="display:none" > Debe marcar este campo </p>
 
-
-</div>
-
-<div id="pref">
-<h1>Preferencias</h1>
-Tipo de Vuelo:<br/>
-<input type="radio" name="type" value="turis" />Turista
-<input type="radio" name="type" value="premium" />Premium
-<input type="radio" name="type" value="pricla" />Primera Clase
-</br>
-</br>
-
-Destinos:<br/>
-	<select name="destino">
-	    <option value="Columbia" selected="Columbia"> Columbia </option>
-		<option value="esdla">La tierra Media</option>
-		<option value="catacrom">Catacrom 4</option>
-		<option value="Lordran"> Lordran </option>
-		<option value="moscu">Moscu </option>
-		<option value="chalo">Ciudad de Halloween</option>
-		<option value="chaldea">Chaldea</option>
-		<option value="Nilfgaard">Nilfgaard</option>
-
-
-	</select>
-
-
-</div>
-
-
-
-
-<div id="com">
-<h1>Comentario:</h1>
-<textarea rows="4" cols="50" id="ta">
-
-</textarea>
 
 </div>
 
