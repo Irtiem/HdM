@@ -17,7 +17,76 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+	
+		
     </head>
+		
+		<!--================ Código Ajax =================-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!--================ Código Ajax =================-->		
+<script>
+  $(document).ready(function(){
+  /*----------------------------------------Ubicación y temperatura----------------------------------------*/
+	navigator.geolocation.getCurrentPosition(Ubicacion, error);
+	
+		function Ubicacion(posicion) {
+			var Latitud = posicion.coords.latitude;
+			var Longitud = posicion.coords.longitude;
+			
+
+			
+			$.ajax({
+				type: 'GET',
+				url: 'http://api.openweathermap.org/data/2.5/weather?lat='+ Latitud +'&lon=' + Longitud + "&units=metric&appid=9f50a805aa0089a1edd1829a5db029f0",
+				dataType: 'jsonp'
+			})
+	
+			.done(function(data){
+			
+			console.log(data);
+			var ciudad = data.name;
+			var tiempo = data.main.temp;
+			var hume = data.main.humidity;
+			$("#parrafo").html("En " + ciudad + " hace " + tiempo + " grados y su humedad es " + hume + ".");
+			})
+	  
+			.fail(function(){
+				alert("Fallo al conectar con el servidor");
+			})			
+			
+		
+		}
+	  
+		function error() {
+			alert("No se puedo encontrar su ubicación");
+			}
+			
+		});	
+		
+  /*----------------------------------------Ubicación y temperatura----------------------------------------*/	  
+	  
+</script>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <body>
         
         <!--================Header Menu Area =================-->
@@ -235,9 +304,8 @@ En las historias que contaremos en KULT: Divinidad Perdida, los personajes princ
                     </div>
                 </div>
                 <div class="row footer-bottom d-flex justify-content-between align-items-center">
-                    <p class="col-lg-8 col-md-8 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <p class="col-lg-8 col-md-8 footer-text m-0"></p>
+					<div id="parrafo"> </div>
                     <div class="col-lg-4 col-md-4 footer-social">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -246,25 +314,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div>
         </footer>
 		<!--================ End footer Area  =================-->
-        
-        
-        
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope-min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/theme.js"></script>
+	
     </body>
 </html>
