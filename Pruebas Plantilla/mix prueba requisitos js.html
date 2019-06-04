@@ -17,7 +17,7 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
-		<!--================ Código Slider =================-->
+		<!--================ Inicio Código Slider =================-->
 		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -32,19 +32,16 @@
 			});
 		});
 		</script>
+		<!--================ Fin Código Slider =================-->
 		<!--================ Código Slider =================-->
-
-		<!--================ Código Formulario =================-->
-		<link rel="stylesheet" href="css/formu.css">
-		<script type="text/javascript" src="js/code.js"></script>
-		<!--================ Código Formulario =================-->		
+		<script type="text/javascript" src="js/code.js"></script>		
+		<!--================ Código Slider =================-->		
+		
 		
 		
     </head>
-
-	<body>
-
-	
+    <body>
+        
         <!--================Header Menu Area =================-->
         <header class="header_area">
             <div class="main_menu">
@@ -127,11 +124,12 @@
 				</li>		
 			</ul>
 		</div>												
-		<!--================ Slider =================-->		
-        		<div class="row services_inner">
-        			<form method="get"  name="formu" id="formu" method="post" >
+		<!--================ Slider =================-->
 
-		<p id="pruebaaa" style="background-color:pink"> </p>
+		<!--================ Formulario =================-->
+	<form method="get"  name="formu" id="formu" method="post" >
+
+		<p id="pruebaaa" style="color:#1E5C57"> </p>
 
 
 
@@ -143,7 +141,7 @@
 	document.getElementById("pruebaaa").innerHTML = d;
 	
 	var nodoPadre = document.getElementById("pruebaaa");
-	var nodoHijo = document.createTextNode("texto");
+	var nodoHijo = document.createTextNode("@info");
 	nodoPadre.appendChild(nodoHijo);
 	document.body.appendChild(nodoPadre);
 
@@ -231,77 +229,58 @@ Acepto las condiciones del servicio y la política </br> de privacidad.<br/>
 
 
 </form>
-				</div>
+		<!--================ Formulario =================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+        		<div class="row feature_inner">
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<h4><i class="lnr lnr-user"></i>Mucha Variedad</h4>
+        					<p>Encontrarás partidas de muchos roles distintos que quizás no conozcas.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<h4><i class="lnr lnr-license"></i>Calidad</h4>
+        					<p>Todas las aventuras y modulos han sido revisados para asegurar su contenido.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<h4><i class="lnr lnr-phone"></i>Gran Comunidad</h4>
+        					<p>Esperamos disponer de una gran comunidad para crear partidas increibles.</p>
+        				</div>
+        			</div>
+        		</div>
         	</div>
         </section>
         <!--================End Services Area =================-->
         
-        <!--================Services Area =================-->
-        <section class="services_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Our Offered Services</h2>
-        			<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit,</p>
-        		</div>
-        		<div class="row services_inner">
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="img/icon/service-icon-1.png" alt="">
-        					<a href="#"><h4>Building Drawings</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="img/icon/service-icon-2.png" alt="">
-        					<a href="#"><h4>Painting Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="img/icon/service-icon-3.png" alt="">
-        					<a href="#"><h4>Repairing Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="img/icon/service-icon-1.png" alt="">
-        					<a href="#"><h4>Building Drawings</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="img/icon/service-icon-2.png" alt="">
-        					<a href="#"><h4>Painting Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="img/icon/service-icon-3.png" alt="">
-        					<a href="#"><h4>Repairing Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Services Area =================-->
-
-
-
 
         
         <!--================ start footer Area  =================-->	
         <footer class="footer-area p_120">
-
-		
-		
-		
-		
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3  col-md-6 col-sm-6">
