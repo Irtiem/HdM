@@ -26,6 +26,10 @@
 		<!--================ Código Ajax =================-->		
 <script>
   $(document).ready(function(){
+	$("#parrafo").fadeOut(3000);
+	$("#parrafo").slideDown("slow");
+	$("#parrafo").fadeIn(3000);
+	
   /*----------------------------------------Ubicación y temperatura----------------------------------------*/
 	navigator.geolocation.getCurrentPosition(Ubicacion, error);
 	

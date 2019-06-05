@@ -1,4 +1,5 @@
   $(document).ready(function(){
+	
   /*----------------------------------------Ubicación y temperatura----------------------------------------*/
 	navigator.geolocation.getCurrentPosition(Ubicacion, error);
 	
@@ -35,6 +36,9 @@
 			}
 			
 		});	
+		
+
+		
 		
   /*----------------------------------------Ubicación y temperatura----------------------------------------*/	  
 	  
